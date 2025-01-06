@@ -1,11 +1,12 @@
-import { Col, Form, Row } from "react-bootstrap";
+import { Col, Form, Row , Container } from "react-bootstrap";
 import styles from "./ContactForm.module.css"
 import Link from "next/link";
 import Image from "next/image";
-import contact from "../../../public/image/contact.png"
+import contact from "../../../public/assets/images/contact.png"
 function ContactForm() {
     return (
-        <Row className="py-2 border-2 !border-[#292a71] !mt-[350px] bg-gray-100 px-3 mx-2 rounded-xl flex items-center justify-center">
+        <Container>
+            <Row className="py-2 border-2 !border-[#292a71] !mt-[350px] bg-gray-100 px-3 mx-2 rounded-xl flex items-center justify-center">
             <Col lg={6} className="flex flex-col mt-[-200px] items-center">
                 <Image
                     src={contact}
@@ -55,6 +56,7 @@ function ContactForm() {
                 </Row>
             </Col>
         </Row>
+        </Container>
     );
 }
 export default ContactForm;

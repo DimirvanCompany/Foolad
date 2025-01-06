@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Image from "next/image";
-import logo from "../../../public/image/Logo.png"
-import group from "../../../public/image/Group.png"
+import logo from "../../../public/assets/images/Logo.png"
+import group from "../../../public/assets/images/Group.png"
 import PopularProducts from "./Footer-Sections/PopularProducts";
 import PracticaLinks from "./Footer-Sections/PracticaLinks";
 import ContactUs from "./Footer-Sections/ContactUs";

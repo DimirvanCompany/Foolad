@@ -2,9 +2,9 @@ import { FiTruck } from "react-icons/fi";
 import { BsLayersHalf } from "react-icons/bs";
 import { FaHandshake } from "react-icons/fa6";
 import { MdHighQuality } from "react-icons/md";
-import carpenter from "../../../public/image/carpenter.jpg"
-import Glassblower from "../../../public/image/glassblower.png"
-import wearingHard from "../../../public/image/wearing-hard.png"
+import carpenter from "../../../public/assets/images/carpenter.jpg"
+import Glassblower from "../../../public/assets/images/glassblower.png"
+import wearingHard from "../../../public/assets/images/wearing-hard.png"
 export const data = [
     {
         id: 1,

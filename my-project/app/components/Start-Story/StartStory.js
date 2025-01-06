@@ -1,11 +1,12 @@
-import { Row, Col } from "react-bootstrap";
+import { Row, Col , Container } from "react-bootstrap";
 import { HiArrowLongLeft } from "react-icons/hi2";
 import StartStoryItem from "./StartStoryItem";
 import StartStoryImage from "./StartStoryImage";
 import { data, images } from "./Datas";
 function StartStory() {
     return (
-        <Row className="flex py-4 px-3 items-center justify-between">
+        <Container>
+            <Row className="flex py-4 px-3 items-center justify-between">
             <Col lg={5} className="my-4 flex flex-col gap-y-12">
                 <div className="foolad-images-container flex gap-x-4">
                     {
@@ -71,6 +72,7 @@ function StartStory() {
                 </Row>
             </Col>
         </Row>
+        </Container>
     );
 }
 

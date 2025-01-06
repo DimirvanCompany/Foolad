@@ -18,13 +18,15 @@ import Footer from './components/Footer/Footer';
 export default function RootLayout({ children }) {
   // const { t } = useTranslation();
   return (
-    <html lang="fa">
+    <html lang="fa" dir='rtl'>
       <head>
         {/* <title>{t('welcome')}</title> */}
         <title>فولاد مرکزی بافق</title>
-      </head>
+            <meta name="description" content="فولاد آلیاژی مرکزی بافق، تولیدکننده برتر انواع فولاد آلیاژی در ایران. با ما تماس بگیرید برای مشاوره رایگان." />
+        </head>
       <body>
         <header >
+        
           <Header />
         </header>
         <main >{children}</main>
