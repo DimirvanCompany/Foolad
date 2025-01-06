@@ -9,7 +9,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        xs: "300px", // تعریف breakpoint برای سایز‌های کوچک‌تر
+      },
+    },
   },
   plugins: [],
 }

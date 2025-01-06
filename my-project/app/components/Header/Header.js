@@ -4,15 +4,16 @@ import { TbMessages } from "react-icons/tb";
 
 export default function Header() {
   return (
-    <header className="hidden xl:block">
+    <div className="hidden xl:block bg-white">
       {/* هدر سایت */}
       <Container className="py-4">
         <Row className="h-14">
           {/* لوگوی اصلی */}
           <Col lg={4} className="flex justify-center items-center">
-            <h1 className="text-2xl font-bold" aria-label="فولاد مرکزی بافق">
-              فولاد مرکزی بافق
-            </h1>
+          <h1 className="text-2xl font-bold" aria-label="فولاد مرکزی بافق">
+              <span className="sr-only">صفحه اصلی فولاد الیاژی مرکزی بافق</span>
+              فولاد الیاژی مرکزی بافق
+          </h1>
           </Col>
 
           {/* منو ناوبری */}
@@ -105,6 +106,6 @@ export default function Header() {
           </Col>
         </Row>
       </Container>
-    </header>
+    </div>
   );
 }

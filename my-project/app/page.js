@@ -1,6 +1,14 @@
+import { Container } from "react-bootstrap";
+import SwiperComponent from "./components/Section1_Slider/SwiperComponent";
 import styles from "./page.module.css";
+import Products from "./components/products/Products";
+import Blog from "./components/blog/Blog";
 export default function Home() {
   return (
-    <h1 className="!text-red-700 text-3xl font-bold underline">Home page</h1>
+      <div>
+        <SwiperComponent />
+        <Products />
+        <Blog />
+      </div>
   );
 }
