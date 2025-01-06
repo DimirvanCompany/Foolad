@@ -5,6 +5,18 @@
   max-width: 1400px !important;
   margin: auto;
 } */
-body{
-  /* background-color: yellow; */
+@font-face {
+  font-family: "IRANSans";
+  src: url("../public/fonts/IRANSans(FaNum).ttf");
+}
+body {
+  font-family: "IRANSans" !important;
+}
+html[lang="fa"] {
+  direction: rtl;
+  font-family: 'IRANSans';
+}
+html[lang="en"] {
+  direction: ltr;
+  font-family: 'Arial';
 }
