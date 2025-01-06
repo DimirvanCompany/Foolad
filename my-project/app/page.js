@@ -1,14 +1,22 @@
-import { Container } from "react-bootstrap";
 import SwiperComponent from "./components/Section1_Slider/SwiperComponent";
 import styles from "./page.module.css";
 import Products from "./components/products/Products";
 import Blog from "./components/blog/Blog";
+import Services from "./components/Services/Services";
+import StartStory from "./components/Start-Story/StartStory";
+import ContactForm from "./components/Contact-Form/ContactForm";
+import { Container } from "react-bootstrap";
 export default function Home() {
   return (
-      <div>
-        <SwiperComponent />
+    <>
+      <SwiperComponent />
+      <Container>
         <Products />
         <Blog />
-      </div>
+        <Services />
+        <StartStory />
+        <ContactForm />
+      </Container>
+    </>
   );
 }
