@@ -49,7 +49,7 @@ function StartStory() {
                     </a>
                     <a
                         href="#"
-                        className="w-full group z-10 bg-gray-100 hover:bg-[#292a71] text-[#292a71] hover:text-gray-200 flex gap-x-2 p-1 text-[12px] sm:text-[16px] h-12 rounded-xl justify-center transition delay-100 items-center"
+                        className="w-full group z-10 bg-gray-200 hover:bg-[#292a71] text-[#292a71] hover:text-gray-200 flex gap-x-2 p-1 text-[12px] sm:text-[16px] h-12 rounded-xl justify-center transition delay-100 items-center"
                         aria-label="بیشتر بخوانید"
                         title="بیشتر بخوانید"
                     >

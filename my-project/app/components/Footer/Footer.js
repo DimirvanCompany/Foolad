@@ -12,7 +12,7 @@ function Footer() {
     return (
         <Container fluid className="max-w-full mt-[200px] pt-20 pb-3 bg-[#292a71] border-2 !border-[#292a71] rounded-t-[250px]">
             <Container className="mt-[-200px]">
-                <Row className="flex items-top bg-gray-300 border-2 rounded-[50px] p-4 !border-[#292a71]">
+                <Row className="flex items-top bg-gray-100 border-2 rounded-[50px] p-4 !border-[#292a71]">
                     <Col lg={5} className="flex flex-col gap-y-6">
                         <Image
                             src={logo}
