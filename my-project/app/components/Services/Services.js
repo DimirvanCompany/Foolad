@@ -28,7 +28,7 @@ function Services() {
         },
     ]
     return (
-        <Container>
+        <Container className="my-5 !px-0">
             <Row className="flex py-4 items-center">
             <Col lg={4} className="my-3 flex flex-col gap-y-6">
                 <div className="relative h-[250px] flex flex-col items-center py-2 px-3 bg-white rounded-xl">

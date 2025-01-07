@@ -40,13 +40,13 @@ export default function Products() {
 
 
     return (
-        <Row className="my-3">
+        <Row className="my-5 !px-0">
             <Row className="bg-white shadow-xl px-5 py-4 rounded-xl">
             <h3 className="text-3xl font-bold pb-4">دسته بندی محصولات</h3>
             <Row>
                 {data.map((item) => (
                     <Col lg={2} key={item.id}>
-                        <div className="bg-gray-200 hover:bg-[#F6F6F6] rounded-tr-2xl rounded-bl-2xl text-center py-[35px]">
+                        <div className="bg-gray-200 rounded-tr-2xl rounded-bl-2xl text-center py-[35px]">
                             <img
                                 src={item.image}
                                 alt={item.title}

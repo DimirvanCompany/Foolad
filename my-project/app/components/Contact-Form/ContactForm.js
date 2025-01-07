@@ -5,7 +5,7 @@ import Image from "next/image";
 import contact from "../../../public/assets/images/contact.png"
 function ContactForm() {
     return (
-        <Container>
+        <Container className="!px-0">
             <Row className="py-2 border-2 !border-[#292a71] !mt-[350px] bg-gray-100 px-3 mx-2 rounded-xl flex items-center justify-center">
             <Col lg={6} className="flex flex-col mt-[-200px] items-center">
                 <Image

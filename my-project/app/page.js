@@ -12,10 +12,10 @@ export default function Home() {
       <SwiperComponent />
       <Container>
         <Products />
-        <Blog />
         <Services />
         <StartStory />
         <ContactForm />
+        <Blog />
       </Container>
     </>
   );

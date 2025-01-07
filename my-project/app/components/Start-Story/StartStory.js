@@ -5,7 +5,7 @@ import StartStoryImage from "./StartStoryImage";
 import { data, images } from "./Datas";
 function StartStory() {
     return (
-        <Container>
+        <Container className="!px-0">
             <Row className="flex py-4 px-3 items-center justify-between">
             <Col lg={5} className="my-4 flex flex-col gap-y-12">
                 <div className="foolad-images-container flex gap-x-4">

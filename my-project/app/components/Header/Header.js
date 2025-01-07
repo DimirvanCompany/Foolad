@@ -4,7 +4,7 @@ import { TbMessages } from "react-icons/tb";
 
 export default function Header() {
   return (
-    <div className="hidden xl:block bg-white">
+    <div className="hidden xl:block bg-white !px-0">
       {/* هدر سایت */}
       <Container className="py-4">
         <Row className="h-14">
