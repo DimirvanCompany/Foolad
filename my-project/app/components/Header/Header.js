@@ -1,8 +1,26 @@
+"use client";
 import { Col, Container, Row } from "react-bootstrap";
 import { LuPhone } from "react-icons/lu";
 import { TbMessages } from "react-icons/tb";
-
+import { useState, useRef } from "react";
+import { toast } from "react-toastify";
 export default function Header() {
+  const textRef = useRef(null);
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    if (textRef.current) {
+      const text = textRef.current.textContent || "";
+      navigator.clipboard.writeText(text).then(() => {
+        setCopied(true);
+        toast.success("شماره تماس کپی شد!", {
+              position: "top-right",
+              autoClose: 5000,
+            });
+        setTimeout(() => setCopied(false), 2000);
+      })
+    }
+  };
   return (
     <div className="hidden xl:block bg-white !px-0">
       {/* هدر سایت */}
@@ -10,10 +28,10 @@ export default function Header() {
         <Row className="h-14">
           {/* لوگوی اصلی */}
           <Col lg={4} className="flex justify-center items-center">
-          <h1 className="text-2xl font-bold" aria-label="فولاد مرکزی بافق">
+            <h1 className="text-2xl font-bold" aria-label="فولاد مرکزی بافق">
               <span className="sr-only">صفحه اصلی فولاد الیاژی مرکزی بافق</span>
               فولاد الیاژی مرکزی بافق
-          </h1>
+            </h1>
           </Col>
 
           {/* منو ناوبری */}
@@ -84,9 +102,11 @@ export default function Header() {
               title="تماس"
             >
               <Row className="flex justify-center items-center">
-                <Col>
+                <Col onClick={handleCopy}>
                   <p className="text-[13px] text-gray-600">شماره تماس</p>
-                  <p className="font-bold text-[15px] -mx-3">09900175567</p>
+                  <p ref={textRef} className="font-bold text-[15px] -mx-3">
+                  {copied ? "09900175567" : "09900175567"}
+                  </p>
                 </Col>
                 <Col>
                   <LuPhone size={"22px"} aria-hidden="true" />

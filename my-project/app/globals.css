@@ -11,6 +11,7 @@
 }
 body {
   font-family: "IRANSans" !important;
+  background-color: #F6F6F6;
 }
 html[lang="fa"] {
   direction: rtl;
@@ -20,6 +21,6 @@ html[lang="en"] {
   direction: ltr;
   font-family: 'Arial';
 }
-body{
-  background-color: #F6F6F6;
+.Toastify{
+  font-family: "IRANSans" !important;
 }

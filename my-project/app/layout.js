@@ -1,3 +1,6 @@
+"use client"; // این خط مهم است!
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Header from './components/Header/Header';
 import 'bootstrap/dist/css/bootstrap.rtl.min.css'
 import './globals.css';
@@ -26,10 +29,12 @@ export default function RootLayout({ children }) {
         </head>
       <body>
         <header >
-        
           <Header />
         </header>
-        <main >{children}</main>
+        <main >
+          {children}
+          <ToastContainer/>
+        </main>
         <footer >
           <Footer />
         </footer>
