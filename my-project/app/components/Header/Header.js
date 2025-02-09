@@ -4,7 +4,7 @@ import { TbMessages } from "react-icons/tb";
 
 export default function Header() {
   return (
-    <div className="hidden xl:block bg-white !px-0">
+    <div className="hidden xl:block bg-white !p-0 !m-0">
       {/* هدر سایت */}
       <Container className="py-4">
         <Row className="h-14">
@@ -17,7 +17,7 @@ export default function Header() {
           </Col>
 
           {/* منو ناوبری */}
-          <Col lg={4} className="bg-[#F6F6F6] flex justify-center items-center">
+          <Col lg={4} className="bg-[#F6F6F6] flex rounded-md justify-center items-center">
             <nav aria-label="منوی اصلی">
               <ul className="flex gap-x-4 font-bold">
                 <li>
@@ -25,7 +25,7 @@ export default function Header() {
                     href="/"
                     title="صفحه خانه"
                     aria-label="رفتن به صفحه خانه"
-                    className="hover:underline"
+                    className="hover:text-[#292a71]"
                   >
                     خانه
                   </a>
@@ -35,7 +35,7 @@ export default function Header() {
                     href="/news"
                     title="اخبار"
                     aria-label="مشاهده اخبار"
-                    className="hover:underline"
+                    className="hover:text-[#292a71]"
                   >
                     اخبار
                   </a>
@@ -45,19 +45,19 @@ export default function Header() {
                     href="/products"
                     title="محصولات"
                     aria-label="مشاهده محصولات"
-                    className="hover:underline"
+                    className="hover:text-[#292a71]"
                   >
                     محصولات
                   </a>
                 </li>
                 <li>
                   <a
-                    href="/weight-table"
-                    title="جدول وزنی"
-                    aria-label="مشاهده جدول وزنی"
-                    className="hover:underline"
+                    href="/blog"
+                    title="وبلاگ"
+                    aria-label="مشاهده وبلاگ ها"
+                    className="hover:text-[#292a71]"
                   >
-                    جدول وزنی
+                    وبلاگ
                   </a>
                 </li>
                 <li>
@@ -65,7 +65,7 @@ export default function Header() {
                     href="/about"
                     title="درباره ما"
                     aria-label="اطلاعات درباره ما"
-                    className="hover:underline"
+                    className="hover:text-[#292a71]"
                   >
                     درباره ما
                   </a>
