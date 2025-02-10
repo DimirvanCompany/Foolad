@@ -4,6 +4,7 @@ import { LuPhone } from "react-icons/lu";
 import { TbMessages } from "react-icons/tb";
 import { useState, useRef } from "react";
 import { toast } from "react-toastify";
+import Link from "next/link";
 export default function Header() {
   const textRef = useRef(null);
   const [copied, setCopied] = useState(false);
@@ -39,54 +40,54 @@ export default function Header() {
             <nav aria-label="منوی اصلی">
               <ul className="flex gap-x-4 font-bold">
                 <li>
-                  <a
+                  <Link
                     href="/"
                     title="صفحه خانه"
                     aria-label="رفتن به صفحه خانه"
                     className="hover:text-[#292a71]"
                   >
                     خانه
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/news"
                     title="اخبار"
                     aria-label="مشاهده اخبار"
                     className="hover:text-[#292a71]"
                   >
                     اخبار
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/products"
                     title="محصولات"
                     aria-label="مشاهده محصولات"
                     className="hover:text-[#292a71]"
                   >
                     محصولات
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/blog"
                     title="وبلاگ"
                     aria-label="مشاهده وبلاگ ها"
                     className="hover:text-[#292a71]"
                   >
                     وبلاگ
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/about"
                     title="درباره ما"
                     aria-label="اطلاعات درباره ما"
                     className="hover:text-[#292a71]"
                   >
                     درباره ما
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
