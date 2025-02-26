@@ -9,7 +9,6 @@ import { Col, Row } from "react-bootstrap";
 import Image from "next/image";
 import { TbMessages } from "react-icons/tb";
 import { IoMdArrowBack } from "react-icons/io";
-
 export default function SwiperComponent() {
   const data = [
     {
@@ -55,7 +54,7 @@ export default function SwiperComponent() {
                 <Col lg={6} className="flex flex-col items-center">
                   <h2
                     id={`slide-title-${item.id}`}
-                    className="mt-[150px] mb-[30px] text-[50px] w-[400px] text-center"
+                    className="mt-[150px] mb-[30px] xs:text-3xl text-[50px] w-[400px] text-center"
                   >
                     تهیه و توزیع محصولات فولادی{" "}
                     <span className="font-bold">صنعتی و ساختمانی</span>
