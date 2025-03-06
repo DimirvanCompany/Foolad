@@ -76,7 +76,7 @@ export default function AuctionTable() {
         </tbody>
         
       </table>
-      <button onClick={exportToExcel} className="mb-4 px-4 py-2 bg-blue-500 text-white rounded mt-4">دانلود Excel</button>
+      <button onClick={exportToExcel} className="mb-4 px-4 py-2 bg-[#292a71] text-white rounded mt-4">دانلود Excel</button>
       {modalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
           <div className="bg-white p-6 rounded shadow-lg w-3/4 max-w-lg">
