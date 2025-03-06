@@ -6,6 +6,7 @@ import Services from "./components/Services/Services";
 import StartStory from "./components/Start-Story/StartStory";
 import ContactForm from "./components/Contact-Form/ContactForm";
 import { Container } from "react-bootstrap";
+import Chart from "./components/Chart/Chart";
 export default function Home() {
   return (
     <>
@@ -14,6 +15,7 @@ export default function Home() {
         <Products />
         <Services />
         <StartStory />
+        <Chart/>
         <ContactForm />
         <Blog />
       </Container>

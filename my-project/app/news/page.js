@@ -2,6 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import Image from "next/image";
 import pic from "@/public/assets/images/carpenter.jpg"
 import NewsItem from "./NewsItem";
+import Chart from "../components/Chart/Chart";
 function News() {
     const bottomNewsData = [
         {
@@ -101,13 +102,8 @@ function News() {
                     </Row>
                 </Col>
             </Row>
-            <Row>
-            <h2 className="!border-s-4 !border-[#292A71] p-3 my-4 mx-2.5">مقالات بیشتر را دنبال کنید!</h2>
-            {
-                bottomNewsData.map( item => (
-                    <NewsItem key={item.id} {...item} />
-                ) )
-            }
+            <Row className="mt-5">
+            <Chart />
             </Row>
         </Container>
     );
