@@ -5,7 +5,6 @@ import { MdOutlineFactCheck } from "react-icons/md";
 import ServiceItem from "./ServiceItem";
 import { HiArrowLongLeft } from "react-icons/hi2";
 import { TbMessages } from "react-icons/tb";
-import Link from "next/link";
 function Services() {
     const data = [
         {
