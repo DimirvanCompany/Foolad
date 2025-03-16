@@ -7,27 +7,43 @@ function About() {
     const data = [
         {
             id: 1,
-            image: "https://yazdanfoolad.com/wp-content/uploads/2023/10/MX-M264N_20231017_150933_001-min-scaled.webp",
-            title: "محمدرضا اشرفی پور راد",
-            semat: "هیئت مدیره"
+            image: "https://static1.khabarfoori.com/servev2/YWYyNTQP3VI6/5Uwvb7W7Zm0,/file.jpg",
+            title: "طاهر ابراهیم زاده",
+            text : "شماره ملی : 1651801932",
+            subText : "نماینده شرکت سنگ آهن مرکزی ایران",
+            semat: "رئیس هیئت مدیره"
         },
         {
             id: 2,
-            image: "https://yazdanfoolad.com/wp-content/uploads/2023/10/MX-M264N_20231017_150933_001-min-scaled.webp",
-            title: "محمدرضا اشرفی پور",
-            semat: "هیئت مدیره"
+            image: "https://static1.khabarfoori.com/servev2/YWYyNTQP3VI6/5Uwvb7W7Zm0,/file.jpg",
+            title: "حمید حسینی",
+            text : "شماره ملی : 4420521661",
+            subText : "نماینده شرکت سنگ آهن مرکزی ایران",
+            semat: "نائب رئیس هیئت مدیره"
         },
         {
             id: 3,
-            image: "https://yazdanfoolad.com/wp-content/uploads/2023/10/MX-M264N_20231017_150933_001-min-scaled.webp",
-            title: "محمدرضا اشرفی",
-            semat: "هیئت مدیره"
+            image: "https://static1.khabarfoori.com/servev2/YWYyNTQP3VI6/5Uwvb7W7Zm0,/file.jpg",
+            title: "مهراداد همتی",
+            text : "شماره ملی : 5669621964",
+            subText : "نماینده شرکت صنعتی معدنی بازرگانی گوهران چعارت بافق",
+            semat: "عضو هیئت مدیره"
         },
         {
             id: 4,
-            image: "https://yazdanfoolad.com/wp-content/uploads/2023/10/MX-M264N_20231017_150933_001-min-scaled.webp",
-            title: "محمد اشرفی",
-            semat: "هیئت مدیره"
+            image: "https://static1.khabarfoori.com/servev2/YWYyNTQP3VI6/5Uwvb7W7Zm0,/file.jpg",
+            title: "حمیدرضا عسگری",
+            text : "شماره ملی : 4470067695",
+            subText : "نماینده شرکت ذوب و نورد مهرخام گیتی جنوب",
+            semat: "عضو هیئت مدیره"
+        },
+        {
+            id: 5,
+            image: "https://static1.khabarfoori.com/servev2/YWYyNTQP3VI6/5Uwvb7W7Zm0,/file.jpg",
+            title: "حمید عاقبت خیری",
+            text : "شماره ملی : 4420517913",
+            subText : "نماینده شرکت ذوب و نورد مهرخام گیتی جنوب",
+            semat: "عضو هیئت مدیره"
         },
     ]
     return (
@@ -47,7 +63,7 @@ function About() {
                 <Row className="hover:!shadow-lg my-3 transition-all delay-200 hover:!cursor-pointer border-s-4 border-[#292A71] hover:border-opacity-90 !bg-gray-200 hover:rounded-xl rounded-e-xl p-3 !shadow-md">
                 <h5 className="pt-2 text-justify h5">سهامداران ، هیئت مدیره ، مدیران:</h5>
                 {data.map((item) => (
-                        <Col md={3} key={item.id}>
+                        <Col md={4} key={item.id}>
                             <Managers {...item} />
                         </Col>
                     ))}

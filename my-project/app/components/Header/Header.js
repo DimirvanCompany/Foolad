@@ -28,7 +28,7 @@ export default function Header() {
       <Container className="py-4">
         <Row className="h-14">
           {/* لوگوی اصلی */}
-          <Col lg={4} className="flex justify-center items-center">
+          <Col lg={3} className="flex justify-center items-center">
             <h1 className="text-2xl font-bold" aria-label="فولاد مرکزی بافق">
               <span className="sr-only">صفحه اصلی فولاد الیاژی مرکزی بافق</span>
               فولاد الیاژی مرکزی بافق
@@ -36,7 +36,7 @@ export default function Header() {
           </Col>
 
           {/* منو ناوبری */}
-          <Col lg={4} className="bg-[#F6F6F6] flex rounded-md justify-center items-center">
+          <Col lg={6} className="bg-[#F6F6F6] flex rounded-md justify-center items-center">
             <nav aria-label="منوی اصلی">
               <ul className="flex gap-x-4 font-bold">
                 <li>
@@ -61,12 +61,12 @@ export default function Header() {
                 </li>
                 <li>
                   <Link
-                    href="/products"
-                    title="محصولات"
-                    aria-label="مشاهده محصولات"
+                    href="/Documents"
+                    title="اسناد مناقصه و مزایده"
+                    aria-label="اسناد مناقصه و مزایده"
                     className="hover:text-[#292a71]"
                   >
-                    محصولات
+                    اسناد مناقصه و مزایده
                   </Link>
                 </li>
                 <li>
@@ -94,7 +94,7 @@ export default function Header() {
           </Col>
 
           {/* شماره تماس و دکمه مشاوره */}
-          <Col lg={4} className="flex justify-center items-center">
+          <Col lg={3} className="flex justify-center items-center">
             {/* دکمه شماره تماس */}
             <div
               role="button"

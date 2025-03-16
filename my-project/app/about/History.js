@@ -1,16 +1,26 @@
 import { Row } from "react-bootstrap";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import { useEffect } from "react";
+
 function History() {
-    const [sliderRef] = useKeenSlider({
+    const [sliderRef, slider] = useKeenSlider({
         loop: true,
-        slides: { perView: 1, spacing: 10 }, // تنظیم پیش‌فرض (موبایل)
+        slides: { perView: 1, spacing: 10 },
         breakpoints: {
-          "(min-width: 640px)": { slides: { perView: 2, spacing: 15 } }, // برای تبلت کوچک (۲ اسلاید)
-          "(min-width: 768px)": { slides: { perView: 3, spacing: 20 } }, // برای تبلت (۳ اسلاید)
-          "(min-width: 1024px)": { slides: { perView: 4, spacing: 25 } }, // برای لپ‌تاپ (۴ اسلاید)
+          "(min-width: 640px)": { slides: { perView: 2, spacing: 15 } },
+          "(min-width: 768px)": { slides: { perView: 3, spacing: 20 } },
+          "(min-width: 1024px)": { slides: { perView: 4, spacing: 25 } },
         },
       });
+      useEffect(() => {
+        if (!slider) return;
+        const interval = setInterval(() => {
+          slider.current?.next(); // اسلاید بعدی را نمایش می‌دهد
+        }, 3000); // تغییر اسلاید هر ۳ ثانیه
+    
+        return () => clearInterval(interval); // پاک کردن تایمر هنگام خروج از کامپوننت
+      }, [slider]);
     return (
         <Row className="hover:!shadow-lg my-3 transition-all delay-200 hover:!cursor-pointer border-s-4 border-[#292A71] hover:border-opacity-90 !bg-gray-200 hover:rounded-xl rounded-e-xl p-3 !shadow-md">
         <h5 className="pt-2 text-justify h5">تاریخچه و افتخارات:</h5>

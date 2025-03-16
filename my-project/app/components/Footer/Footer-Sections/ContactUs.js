@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
 function ContactUs() {
     return (
-        <Col lg={2} md={4} className="flex flex-col !mt-12 gap-y-5">
+        <Col lg={3} md={6} className="flex flex-col !mt-12 gap-y-5">
             <ul className="flex flex-col gap-y-4">
                 <Row className="text-[#292a71] mb-2 p-2">ارتباط با ما</Row>
                 <li className="hover:text-blue-900 transition duration-200 delay-100">
@@ -35,8 +35,8 @@ function ContactUs() {
                 <li className="hover:text-blue-900 transition duration-200 delay-100">
                     <Link
                         href={"/"}
-                        aria-label="میلگرد"
-                        title="میلگرد"
+                        aria-label="آدرس"
+                        title="آدرس"
                     >
                         <span className="flex text-sm items-center gap-x-2">
                             <CiLocationOn size="20px" />
