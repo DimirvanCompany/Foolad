@@ -1,14 +1,5 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    i18n: {
-        locales: ['en', 'fa'], // زبان‌ها
-        defaultLocale: 'fa',   // زبان پیش‌فرض
-        localeDetection: false, // شناسایی خودکار زبان
-    },
-};
-
-// export default nextConfig;
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {};
-
-// export default nextConfig;
+export default {
+    reactStrictMode: true,
+    swcMinify: true
+  };
+  
