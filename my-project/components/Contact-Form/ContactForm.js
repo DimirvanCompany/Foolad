@@ -2,7 +2,7 @@ import { Col, Form, Row , Container } from "react-bootstrap";
 import styles from "./ContactForm.module.css"
 import Link from "next/link";
 import Image from "next/image";
-import contact from "../../../public/assets/images/contact.png"
+import contact from "../../public/assets/images/contact.png"
 function ContactForm() {
     return (
         <Container className="!px-0">

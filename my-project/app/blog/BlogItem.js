@@ -3,7 +3,6 @@ import { FaArrowLeft } from "react-icons/fa6";
 export default function BlogItem({title , desc , image}){
     return(
         <div>
-            
             <div className='bg-gray-300 p-2 m-3 text-center rounded-xl'>
                 <div className="cardHead">
                     <img src={image} />

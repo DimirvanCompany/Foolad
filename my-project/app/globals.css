@@ -24,3 +24,6 @@ html[lang="en"] {
 .Toastify{
   font-family: "IRANSans" !important;
 }
+.arrow-hover:hover div span{
+  display: flex;
+}

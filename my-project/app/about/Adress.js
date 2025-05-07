@@ -1,5 +1,5 @@
 import { Row , Col } from "react-bootstrap";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+// import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 function Adress() {
     const position = [35.6892, 51.3890]; // تهران
@@ -13,7 +13,7 @@ function Adress() {
                       </p>
                       </div>
                       <div className="my-4">
-                        <MapContainer center={position} zoom={13} style={{ height: "400px", width: "100%" }}>
+                        {/* <MapContainer center={position} zoom={13} style={{ height: "400px", width: "100%" }}>
                           <TileLayer
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                           />
@@ -28,7 +28,7 @@ function Adress() {
                               </a>
                             </Popup>
                           </Marker>
-                        </MapContainer>
+                        </MapContainer> */}
                       </div>
                     </Col>
                 </Row>

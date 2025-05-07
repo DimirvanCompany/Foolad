@@ -1,10 +1,10 @@
 "use client"; // این خط مهم است!
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Header from './components/Header/Header';
+import Header from '../components/Header/Header';
 import 'bootstrap/dist/css/bootstrap.rtl.min.css'
 import './globals.css';
-import Footer from './components/Footer/Footer';
+import Footer from '../components/Footer/Footer';
 // import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 // import { useTranslation } from 'react-i18next';
 // import '../config/i18n';
