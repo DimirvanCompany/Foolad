@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react';
 import { Container } from 'react-bootstrap';
 import { useTable } from 'react-table';
 import * as XLSX from 'xlsx';
-
+import { Row } from "react-bootstrap"
 export default function AuctionTable() {
   const data = useMemo(() => [
     { id: 1, requestNumber: '260', title: 'لوازم کامپیوتر', fromDate: '1400/04/29', toDate: '1400/05/01', buyer: 'هادی فتاحی بافقی', phone: '03531454977' , desc : 'اگهی ماقصه...' },
@@ -41,13 +41,21 @@ export default function AuctionTable() {
   };
 
   return (
-    <Container className='my-5'>
+    <Container className='m-auto mt-5'>
+        <Row className="my-3 m-auto flex flex-col gap-y-6">
+            <div className="relative h-[100px] justify-center flex flex-col items-center py-2 px-3 rounded-xl">
+                <div className="absolute inset-0 rounded-xl before:absolute before:top-0 before:left-0 before:w-16 before:h-16 before:border-t-4 before:border-l-4 before:border-[#292A71] before:rounded-tl-xl after:absolute after:bottom-0 after:right-0 after:w-16 after:h-16 after:border-b-4 after:border-r-4 after:border-[#292A71] after:rounded-br-xl"></div>
+                <div className="relative flex justify-center items-center border-[#292A71]" aria-label="title">
+                    <h1 className="h1">اسناد مناقصه و مزایده</h1>
+                </div>
+            </div>
+        </Row>
         <div>
-            <h3 className='text-justify my-5 bg-gray-200 p-5 rounded-lg border-r-4 border-[#292a71] text-lg'>
+            <h3 className='text-justify my-5 bg-gray-200 p-5 rounded-lg text-lg'>
             کليه اشخاص حقوقي و حقيقي واجد شرايط که قصد شرکت در مناقصه را دارند جهت مشاهده جزييات مناقصه و خريد اسنادلازم است اقدام به ثبت نام و تشکيل حساب کاربري در سامانه شناسايي و ارزيابي تامين کنندگان شرکت سنگ آهن مرکزي نمايند.لذا جهت ثبت نام به منوي ارزيابي تامين کنندگان بخش ثبت نام اوليه مراجعه فرماييد.
-چنانچه قبلا در اين سامانه ثبت نام نموده ايد به بخش بازرگاني منوي مناقصه در حساب کاربري خود مراجعه
-و اطلاعات مناقصه را ملاحظه فرماييد.
-در صورت داشتن هرگونه سوالي با واحد برنامه ريزي خريد با شماره تلفن 03531454980 تماس حاصل فرماييد.
+            چنانچه قبلا در اين سامانه ثبت نام نموده ايد به بخش بازرگاني منوي مناقصه در حساب کاربري خود مراجعه
+            و اطلاعات مناقصه را ملاحظه فرماييد.
+            در صورت داشتن هرگونه سوالي با واحد برنامه ريزي خريد با شماره تلفن 03531454980 تماس حاصل فرماييد.
             </h3>
         </div>
         <div className="">

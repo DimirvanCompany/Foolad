@@ -3,6 +3,7 @@ import { HiArrowLongLeft } from "react-icons/hi2";
 import StartStoryItem from "./StartStoryItem";
 import StartStoryImage from "./StartStoryImage";
 import { data, images } from "./Datas";
+import Link from "next/link"
 function StartStory() {
     return (
         <Container className="!px-0">
@@ -39,23 +40,23 @@ function StartStory() {
                     شرکت آرگون فولاد مرکزی بافق با هدف تهیه و توزیع انواع مقاطع فولادی، صنعتی و ساختمانی همراه کادر مدیریتی مجرب با تکیه بر جوانان ایرانی و تجربه ای افزون بر 30 سال آماده خدمت رسانی به شما مشتریان و همراهان گرامی می باشد.
                 </p>
                 <div className="btns w-full mt-3 flex gap-x-2 items-center">
-                    <a
-                        href="#"
-                        className="bg-[#292a71] group transition delay-100 hover:bg-[#1c1d61] z-10 w-full flex gap-x-2 p-1 text-[12px] sm:text-[16px] h-12 rounded-xl justify-center items-center"
+                    <Link
+                        href="/products"
+                        className="bg-[#292a71] group transition delay-100 hover:bg-[#1c1d61] z-10 w-full flex gap-x-2 p-1 sm:text-[16px] h-12 rounded-xl justify-center items-center"
                         aria-label="مشاهده محصولات"
                         title="مشاهده محصولات"
                     >
                         <span className="text-gray-100">مشاهده محصولات</span>
-                    </a>
-                    <a
-                        href="#"
-                        className="w-full group z-10 bg-gray-200 hover:bg-[#292a71] text-[#292a71] hover:text-gray-200 flex gap-x-2 p-1 text-[12px] sm:text-[16px] h-12 rounded-xl justify-center transition delay-100 items-center"
+                    </Link>
+                    <Link
+                        href="/about"
+                        className="w-full group z-10 bg-gray-200 hover:bg-[#292a71] text-[#292a71] hover:text-gray-200 flex gap-x-2 p-1 sm:text-[16px] h-12 rounded-xl justify-center transition delay-100 items-center"
                         aria-label="بیشتر بخوانید"
                         title="بیشتر بخوانید"
                     >
                         <span>بیشتر بخوانید</span>
                         <HiArrowLongLeft size="30px" aria-hidden="true" />
-                    </a>
+                    </Link>
                 </div>
                 <Row className="different-from-everyone">
                     <div className="mt-3 mb-2 relative flex flex-col items-center p-3 bg-gray-100 rounded-xl shadow-md">

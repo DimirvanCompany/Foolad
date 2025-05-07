@@ -7,10 +7,10 @@ function ContactForm() {
     return (
         <Container className="!px-0">
             <Row className="py-2 border-2 !border-[#292a71] !mt-[350px] bg-gray-100 px-3 mx-2 rounded-xl flex items-center justify-center">
-            <Col lg={6} className="flex flex-col mt-[-300px] items-center">
+            <Col lg={6} className="flex-col mt-[-200px] hidden md:flex items-center">
                 <Image
                     src={contact}
-                    alt="قطعات فولادی" className="mb-20 select-none"
+                    alt="قطعات فولادی" className="select-none"
                     width={400}
                     height={400}
                 />

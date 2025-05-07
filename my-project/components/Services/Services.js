@@ -5,6 +5,7 @@ import { MdOutlineFactCheck } from "react-icons/md";
 import ServiceItem from "./ServiceItem";
 import { HiArrowLongLeft } from "react-icons/hi2";
 import { TbMessages } from "react-icons/tb";
+import Link from "next/link"
 function Services() {
     const data = [
         {
@@ -30,7 +31,7 @@ function Services() {
         <Container className="my-5 !px-0">
             <Row className="flex py-4 items-center">
             <Col lg={4} className="my-3 flex flex-col gap-y-6">
-                <div className="relative h-[300px] justify-center flex flex-col items-center py-2 px-3 rounded-xl">
+                <div className="relative h-[300px] md:h-[350px] lg:h-[400px] xl:h-[300px] justify-center flex flex-col items-center py-2 px-3 rounded-xl">
                     <div className="absolute inset-0 rounded-xl before:absolute before:top-0 before:left-0 before:w-16 before:h-16 before:border-t-4 before:border-l-4 before:border-[#292A71] before:rounded-tl-xl after:absolute after:bottom-0 after:right-0 after:w-16 after:h-16 after:border-b-4 after:border-r-4 after:border-[#292A71] after:rounded-br-xl"></div>
                     <div className="relative flex justify-center items-center mb-4 border-[#292A71]" aria-label="title">
                         <h2 className="text-xl font-medium text-center">
@@ -38,10 +39,10 @@ function Services() {
                         </h2>
                     </div>
                     <p className="text-gray-600 relative text-[13px]">
-                        در منشور اخلاقی آرگون فولاد ایرانیان، اعتماد مهم‌ترین گزینه و سرمایه اجتماعی است...
+                        در منشور اخلاقی فولاد مرکزی بافق، اعتماد مهم‌ترین گزینه و سرمایه اجتماعی است...
                     </p>
                     <div className="btns w-full mt-3 flex flex-col gap-y-4 items-center">
-                        <a
+                        <Link
                             href="#"
                             className="mx-3 bg-[#292a71] group transition delay-100 hover:bg-[#1c1d61] z-10 w-full flex gap-x-2 p-1 h-12 rounded-xl justify-center items-center"
                             aria-label="مشاوره رایگان"
@@ -49,16 +50,16 @@ function Services() {
                         >
                             <TbMessages className="text-gray-100" size="30px" aria-hidden="true" />
                             <span className="text-gray-100">مشاوره رایگان</span>
-                        </a>
-                        <a
-                            href="#"
+                        </Link>
+                        <Link
+                            href="/blog"
                             className="w-full group mx-3 z-10 bg-gray-100 hover:bg-[#292a71] text-[#292a71] hover:text-gray-200 flex gap-x-2 p-1 h-12 rounded-xl justify-center transition delay-100 items-center"
                             aria-label="بیشتر بخوانید"
                             title="بیشتر بخوانید"
                         >
                             <span>بیشتر بخوانید</span>
                             <HiArrowLongLeft size="30px" aria-hidden="true" />
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </Col>
