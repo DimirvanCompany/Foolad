@@ -5,9 +5,13 @@ import { TbMessages } from "react-icons/tb";
 import { useState, useRef } from "react";
 import { toast } from "react-toastify";
 import Link from "next/link";
+import { FiMenu, FiX } from "react-icons/fi";
+import styles from './page.module.css';
+
 export default function Header() {
   const textRef = useRef(null);
   const [copied, setCopied] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const handleCopy = () => {
     if (textRef.current) {
@@ -15,118 +19,248 @@ export default function Header() {
       navigator.clipboard.writeText(text).then(() => {
         setCopied(true);
         toast.success("شماره تماس کپی شد!", {
-              position: "top-right",
-              autoClose: 5000,
-            });
+          position: "top-right",
+          autoClose: 5000,
+        });
         setTimeout(() => setCopied(false), 2000);
-      })
+      });
     }
   };
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+  };
+
   return (
-    <div className="hidden xl:block bg-white !p-0 !m-0">
-      {/* هدر سایت */}
-      <Container className="py-4">
-        <Row className="h-14">
-          {/* لوگوی اصلی */}
-          <Col lg={3} className="flex justify-center items-center">
-            <h1 className="text-2xl font-bold" aria-label="فولاد مرکزی بافق">
-              <span className="sr-only">صفحه اصلی فولاد الیاژی مرکزی بافق</span>
-              فولاد الیاژی مرکزی بافق
-            </h1>
-          </Col>
+    <>
+      {/* هدر اصلی برای دسکتاپ (بزرگ‌تر از 768px) */}
+      <div className="xl:block hidden bg-white !p-0 !m-0">
+        <Container className="py-4">
+          <Row className="h-14">
+            <Col lg={3} className="flex justify-center items-center">
+              <h1 className="text-2xl font-bold" aria-label="فولاد مرکزی بافق">
+                <span className="sr-only">صفحه اصلی فولاد الیاژی مرکزی بافق</span>
+                فولاد الیاژی مرکزی بافق
+              </h1>
+            </Col>
+            <Col lg={6} className="bg-[#F6F6F6] flex rounded-md justify-center items-center">
+              <nav aria-label="منوی اصلی">
+                <ul className="flex gap-x-4 font-bold">
+                  <li>
+                    <Link
+                      href="/"
+                      title="صفحه خانه"
+                      aria-label="رفتن به صفحه خانه"
+                      className="hover:text-[#292a71]"
+                    >
+                      خانه
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/news"
+                      title="اخبار"
+                      aria-label="مشاهده اخبار"
+                      className="hover:text-[#292a71]"
+                    >
+                      اخبار
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/Documents"
+                      title="اسناد مناقصه و مزایده"
+                      aria-label="اسناد مناقصه و مزایده"
+                      className="hover:text-[#292a71]"
+                    >
+                      اسناد مناقصه و مزایده
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/blog"
+                      title="وبلاگ"
+                      aria-label="مشاهده وبلاگ ها"
+                      className="hover:text-[#292a71]"
+                    >
+                      وبلاگ
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/about"
+                      title="درباره ما"
+                      aria-label="اطلاعات درباره ما"
+                      className="hover:text-[#292a71]"
+                    >
+                      درباره ما
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
+            </Col>
+            <Col lg={3} className="flex justify-center items-center">
+              <div
+                role="button"
+                className="p-1 rounded-xl h-12 cursor-pointer phoneContainer"
+                aria-label="تماس با شماره 09900175567"
+                title="تماس"
+              >
+                <Row className="flex justify-center items-center">
+                  <Col onClick={handleCopy}>
+                    <p className="text-[13px] text-gray-600">شماره تماس</p>
+                    <p ref={textRef} className="font-bold text-[15px] -mx-3">
+                      {copied ? "09900175567" : "09900175567"}
+                    </p>
+                  </Col>
+                  <Col>
+                    <LuPhone size={"22px"} aria-hidden="true" />
+                  </Col>
+                </Row>
+              </div>
+              <button
+                className="px-2 mx-3 bg-[#292a71] flex gap-x-2 p-1 h-12 rounded-xl justify-center items-center"
+                aria-label="مشاوره رایگان"
+                title="مشاوره رایگان"
+              >
+                <TbMessages className="text-gray-100" size={"30px"} aria-hidden="true" />
+                <span className="text-gray-100">مشاوره رایگان</span>
+              </button>
+            </Col>
+          </Row>
+        </Container>
+      </div>
 
-          {/* منو ناوبری */}
-          <Col lg={6} className="bg-[#F6F6F6] flex rounded-md justify-center items-center">
-            <nav aria-label="منوی اصلی">
-              <ul className="flex gap-x-4 font-bold">
-                <li>
-                  <Link
-                    href="/"
-                    title="صفحه خانه"
-                    aria-label="رفتن به صفحه خانه"
-                    className="hover:text-[#292a71]"
-                  >
-                    خانه
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/news"
-                    title="اخبار"
-                    aria-label="مشاهده اخبار"
-                    className="hover:text-[#292a71]"
-                  >
-                    اخبار
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/Documents"
-                    title="اسناد مناقصه و مزایده"
-                    aria-label="اسناد مناقصه و مزایده"
-                    className="hover:text-[#292a71]"
-                  >
-                    اسناد مناقصه و مزایده
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/blog"
-                    title="وبلاگ"
-                    aria-label="مشاهده وبلاگ ها"
-                    className="hover:text-[#292a71]"
-                  >
-                    وبلاگ
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/about"
-                    title="درباره ما"
-                    aria-label="اطلاعات درباره ما"
-                    className="hover:text-[#292a71]"
-                  >
-                    درباره ما
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </Col>
-
-          {/* شماره تماس و دکمه مشاوره */}
-          <Col lg={3} className="flex justify-center items-center">
-            {/* دکمه شماره تماس */}
-            <div
-              role="button"
-              className="p-1 rounded-xl h-12 cursor-pointer"
-              aria-label="تماس با شماره 09900175567"
-              title="تماس"
-            >
-              <Row className="flex justify-center items-center">
-                <Col onClick={handleCopy}>
-                  <p className="text-[13px] text-gray-600">شماره تماس</p>
-                  <p ref={textRef} className="font-bold text-[15px] -mx-3">
+      {/* هدر برای تبلت و موبایل (زیر 768px) */}
+      <div className="xl:hidden flex justify-between items-center p-4">
+        {/* شماره تماس */}
+        <div className="flex flex-col gap-y-2 phoneContainer">
+          <div
+            role="button"
+            className="p-2 rounded-xl cursor-pointer"
+            aria-label="تماس با شماره 09900175567"
+            title="تماس"
+          >
+            <Row className="flex items-center gap-x-2">
+              <Col onClick={handleCopy}>
+                <p className="text-[13px] text-gray-600">شماره تماس</p>
+                <p ref={textRef} className="font-bold text-[15px]">
                   {copied ? "09900175567" : "09900175567"}
-                  </p>
-                </Col>
-                <Col>
-                  <LuPhone size={"22px"} aria-hidden="true" />
-                </Col>
-              </Row>
-            </div>
+                </p>
+              </Col>
+              <Col>
+                <LuPhone size={"22px"} aria-hidden="true" />
+              </Col>
+            </Row>
+          </div>
+        </div>
+        {/* دکمه همبرگری */}
+        <button onClick={toggleSidebar} aria-label="باز کردن منو">
+          <FiMenu size={30} />
+        </button>
+      </div>
 
-            {/* دکمه مشاوره رایگان */}
-            <button
-              className="px-2 mx-3 bg-[#292a71] flex gap-x-2 p-1 h-12 rounded-xl justify-center items-center"
-              aria-label="مشاوره رایگان"
-              title="مشاوره رایگان"
-            >
-              <TbMessages className="text-gray-100" size={"30px"} aria-hidden="true" />
-              <span className="text-gray-100">مشاوره رایگان</span>
-            </button>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+      {/* سایدبار برای تبلت و موبایل (زیر 768px) */}
+      <div className={`${styles.sidebar} ${isSidebarOpen ? styles.sidebarOpen : ''}`}>
+        <Container>
+          <Row className="h-auto">
+            <Col className="p-4">
+              {/* دکمه بستن سایدبار */}
+              <div className="flex justify-end mb-4">
+                <button onClick={closeSidebar} aria-label="بستن منو">
+                  <FiX size={30} />
+                </button>
+              </div>
+              <h1 className="text-2xl font-bold mb-4" aria-label="فولاد مرکزی بافق">
+                <span className="sr-only">صفحه اصلی فولاد الیاژی مرکزی بافق</span>
+                فولاد الیاژی مرکزی بافق
+              </h1>
+              <nav aria-label="منوی اصلی">
+                <ul className="flex flex-col gap-y-2 font-bold">
+                  <li>
+                    <Link
+                      href="/"
+                      title="صفحه خانه"
+                      aria-label="رفتن به صفحه خانه"
+                      className="hover:text-[#292a71]"
+                      onClick={closeSidebar}
+                    >
+                      خانه
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/news"
+                      title="اخبار"
+                      aria-label="مشاهده اخبار"
+                      className="hover:text-[#292a71]"
+                      onClick={closeSidebar}
+                    >
+                      اخبار
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/Documents"
+                      title="اسناد مناقصه و مزایده"
+                      aria-label="اسناد مناقصه و مزایده"
+                      className="hover:text-[#292a71]"
+                      onClick={closeSidebar}
+                    >
+                      اسناد مناقصه و مزایده
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/blog"
+                      title="وبلاگ"
+                      aria-label="مشاهده وبلاگ ها"
+                      className="hover:text-[#292a71]"
+                      onClick={closeSidebar}
+                    >
+                      وبلاگ
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/about"
+                      title="درباره ما"
+                      aria-label="اطلاعات درباره ما"
+                      className="hover:text-[#292a71]"
+                      onClick={closeSidebar}
+                    >
+                      درباره ما
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
+              <div className="mt-4 flex flex-col gap-y-4">
+                <button
+                  className="px-2 bg-[#292a71] flex gap-x-2 p-2 rounded-xl justify-center items-center"
+                  aria-label="مشاوره رایگان"
+                  title="مشاوره رایگان"
+                >
+                  <TbMessages className="text-gray-100" size={"30px"} aria-hidden="true" />
+                  <span className="text-gray-100">مشاوره رایگان</span>
+                </button>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+
+      {/* Overlay برای بستن سایدبار با کلیک روی پس‌زمینه */}
+      {isSidebarOpen && (
+        <div
+          className={styles.overlay}
+          onClick={closeSidebar}
+          aria-label="بستن سایدبار"
+        />
+      )}
+    </>
   );
 }

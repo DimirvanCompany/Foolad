@@ -1,0 +1,31 @@
+/* page.module.css */
+.tableContainer {
+    width: 100%;
+  }
+  
+  .table {
+    width: 100%;
+    border: 1px solid #d1d5db; /* border-gray-300 */
+  }
+  
+  @media (max-width: 768px) {
+    .tableContainer {
+      overflow-x: auto;
+    }
+  
+    .table {
+      min-width: 600px;
+      display: block;
+    }
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid #d1d5db;
+    padding: 0.5rem;
+    white-space: nowrap;
+  }
+  
+  .table thead tr {
+    background-color: #e5e7eb; /* bg-gray-200 */
+  }
