@@ -1,4 +1,4 @@
-import { Col, Row } from "react-bootstrap";
+import { Col, Row , Container} from "react-bootstrap";
 import { IoMdArrowBack } from "react-icons/io";
 
 export default function Products() {
@@ -40,34 +40,36 @@ export default function Products() {
 
 
     return (
-        <Row className="my-5 flex justify-center">
-            <Row className="bg-white shadow-xl flex justify-center px-5 py-4 rounded-xl">
-            <h3 className="text-3xl font-bold ps-4 pb-4">دسته بندی محصولات</h3>
-            <Row>
-                {data.map((item) => (
-                    <Col lg={2} key={item.id} className="my-2">
-                        <div className="bg-gray-200 rounded-tr-2xl rounded-bl-2xl text-center py-[35px]">
-                            <img
-                                src={item.image}
-                                alt={item.title}
-                                className="img-fluid mx-auto h-16"
-                            />
-                            <p className="my-2">{item.title}</p>
-                            <a href="#" className="flex items-center justify-center gap-x-2">
-                                <span>مشاهده لیست قیمت</span>
-                                <span>
-                                    <IoMdArrowBack
-                                        className="text-gray-900"
-                                        size={"20px"}
-                                        aria-hidden="true"
-                                    />
-                                </span>
-                            </a>
-                        </div>
-                    </Col>
-                ))}
+        <Container className="m-auto mt-5">
+            <Row className="my-5 flex justify-center">
+                <Row className="bg-white shadow-xl flex justify-center px-5 py-4 rounded-xl">
+                <h3 className="text-3xl font-bold ps-4 pb-4">دسته بندی محصولات</h3>
+                <Row>
+                    {data.map((item) => (
+                        <Col lg={2} key={item.id} className="my-2">
+                            <div className="bg-gray-200 rounded-tr-2xl rounded-bl-2xl text-center py-[35px]">
+                                <img
+                                    src={item.image}
+                                    alt={item.title}
+                                    className="img-fluid mx-auto h-16"
+                                />
+                                <p className="my-2">{item.title}</p>
+                                <a href="#" className="flex items-center justify-center gap-x-2">
+                                    <span>مشاهده لیست قیمت</span>
+                                    <span>
+                                        <IoMdArrowBack
+                                            className="text-gray-900"
+                                            size={"20px"}
+                                            aria-hidden="true"
+                                        />
+                                    </span>
+                                </a>
+                            </div>
+                        </Col>
+                    ))}
+                </Row>
+                </Row>
             </Row>
-            </Row>
-        </Row>
+        </Container>
     )
 }

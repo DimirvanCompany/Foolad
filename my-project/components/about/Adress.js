@@ -12,7 +12,7 @@ function Adress() {
           <Col lg={12}>
             <div className="my-4">
             <p className="text-justify">
-            بافق - شهرک آهن شهر - پلاک 495
+            بافق - شهرک آهن شهر - روبروی تصفیه خانه آب - پلاک 395
             </p>
             </div>
             <div style={{ width: '100%', height: '400px' }}>

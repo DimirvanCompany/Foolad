@@ -4,12 +4,7 @@ import TopThreeNews from "../../components/news/TopThreeNews.js";
 import NewsItem from "../../components/news/NewsItem.js";
 import newsImage from "../../public/assets/images/Group.png"
 import Link from 'next/link'
-// import { Helmet } from 'react-helmet';
 function News() {
-    // export default const metadata = {
-    //     title: 'اخبار امروز | سایت فولاد',
-    //     description: 'تازه‌ترین اخبار و اطلاعیه‌ها',
-    //   };
     const NewsData = [
         {
             id : 1,

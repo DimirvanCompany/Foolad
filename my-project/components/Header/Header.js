@@ -41,13 +41,13 @@ export default function Header() {
       <div className="xl:block hidden bg-white !p-0 !m-0">
         <Container className="py-4">
           <Row className="h-14">
-            <Col lg={3} className="flex justify-center items-center">
-              <h1 className="text-2xl font-bold" aria-label="فولاد مرکزی بافق">
-                <span className="sr-only">صفحه اصلی فولاد الیاژی مرکزی بافق</span>
-                فولاد الیاژی مرکزی بافق
+            <Col lg={4} className="flex justify-center items-center">
+              <h1 className="text-md font-bold" aria-label="فولاد مرکزی بافق">
+                <span className="sr-only">صفحه اصلی فولاد الیاژی مرکزی بافق (سهامی خاص)</span>
+                فولاد الیاژی مرکزی بافق (سهامی خاص)
               </h1>
             </Col>
-            <Col lg={6} className="bg-[#F6F6F6] flex rounded-md justify-center items-center">
+            <Col lg={4} className="bg-[#F6F6F6] flex rounded-md justify-center items-center">
               <nav aria-label="منوی اصلی">
                 <ul className="flex gap-x-4 font-bold">
                   <li>
@@ -103,24 +103,24 @@ export default function Header() {
                 </ul>
               </nav>
             </Col>
-            <Col lg={3} className="flex justify-center items-center">
+            <Col lg={4} className="flex justify-center items-center">
               <div
                 role="button"
-                className="p-1 rounded-xl h-12 cursor-pointer phoneContainer"
-                aria-label="تماس با شماره 09900175567"
+                className="p-1 rounded-xl h-12 cursor-pointer flex items-center phoneContainer"
+                aria-label="تماس با شماره 09940970918"
                 title="تماس"
               >
-                <Row className="flex justify-center items-center">
-                  <Col onClick={handleCopy}>
-                    <p className="text-[13px] text-gray-600">شماره تماس</p>
+                <div className="flex justify-center items-center gap-x-6">
+                  <div onClick={handleCopy} className="flex items-center justify-center">
+                    <p className="text-[13px] font-bold">شماره تماس</p>
+                  </div>
+                  <div className="flex items-center gap-x-6 justify-center">
                     <p ref={textRef} className="font-bold text-[15px] -mx-3">
-                      {copied ? "09900175567" : "09900175567"}
+                      {copied ? "09940970918" : "09940970918"}
                     </p>
-                  </Col>
-                  <Col>
-                    <LuPhone size={"22px"} aria-hidden="true" />
-                  </Col>
-                </Row>
+                    <LuPhone size={"20px"} aria-hidden="true" />
+                  </div>
+                </div>
               </div>
               <button
                 className="px-2 mx-3 bg-[#292a71] flex gap-x-2 p-1 h-12 rounded-xl justify-center items-center"
@@ -136,20 +136,30 @@ export default function Header() {
       </div>
 
       {/* هدر برای تبلت و موبایل (زیر 768px) */}
-      <div className="xl:hidden flex justify-between items-center p-4">
+      <div className="xl:hidden flex justify-around items-center p-4">
+      <div className="flex justify-start items-center gap-x-4">
+        {/* دکمه همبرگری */}
+        <button onClick={toggleSidebar} aria-label="باز کردن منو">
+          <FiMenu size={30} />
+        </button>
+        <h1 className="text-[12px] flex gap-y-2 flex-col font-bold" aria-label="فولاد مرکزی بافق">
+          <span className="sr-only">صفحه اصلی فولاد الیاژی مرکزی بافق (سهامی خاص)</span>
+          فولاد الیاژی مرکزی بافق <br/> <span>(سهامی خاص)</span>
+        </h1>
+      </div>
         {/* شماره تماس */}
         <div className="flex flex-col gap-y-2 phoneContainer">
           <div
             role="button"
             className="p-2 rounded-xl cursor-pointer"
-            aria-label="تماس با شماره 09900175567"
+            aria-label="تماس با شماره 09940970918"
             title="تماس"
           >
-            <Row className="flex items-center gap-x-2">
+            <Row className="flex items-center">
               <Col onClick={handleCopy}>
                 <p className="text-[13px] text-gray-600">شماره تماس</p>
                 <p ref={textRef} className="font-bold text-[15px]">
-                  {copied ? "09900175567" : "09900175567"}
+                  {copied ? "09940970918" : "09940970918"}
                 </p>
               </Col>
               <Col>
@@ -158,10 +168,6 @@ export default function Header() {
             </Row>
           </div>
         </div>
-        {/* دکمه همبرگری */}
-        <button onClick={toggleSidebar} aria-label="باز کردن منو">
-          <FiMenu size={30} />
-        </button>
       </div>
 
       {/* سایدبار برای تبلت و موبایل (زیر 768px) */}
@@ -170,15 +176,15 @@ export default function Header() {
           <Row className="h-auto">
             <Col className="p-4">
               {/* دکمه بستن سایدبار */}
-              <div className="flex justify-end mb-4">
+              <div className="flex justify-between items-center mb-4">
+              <h1 className="text-[12px] flex gap-y-2 flex-col font-bold" aria-label="فولاد مرکزی بافق">
+                <span className="sr-only">صفحه اصلی فولاد الیاژی مرکزی بافق (سهامی خاص)</span>
+                فولاد الیاژی مرکزی بافق <br/> <span>(سهامی خاص)</span>
+              </h1>
                 <button onClick={closeSidebar} aria-label="بستن منو">
                   <FiX size={30} />
                 </button>
               </div>
-              <h1 className="text-2xl font-bold mb-4" aria-label="فولاد مرکزی بافق">
-                <span className="sr-only">صفحه اصلی فولاد الیاژی مرکزی بافق</span>
-                فولاد الیاژی مرکزی بافق
-              </h1>
               <nav aria-label="منوی اصلی">
                 <ul className="flex flex-col gap-y-2 font-bold">
                   <li>
