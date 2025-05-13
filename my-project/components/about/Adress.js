@@ -16,15 +16,15 @@ function Adress() {
             </p>
             </div>
             <div style={{ width: '100%', height: '400px' }}>
-              <iframe
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps?q=32.03374917523096,54.22349579916291&z=15&output=embed"
-              ></iframe>
+            <iframe
+              src="https://www.google.com/maps?q=31.616459,55.431743&hl=fa&z=17&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
             </div>
           </Col>
         </Row>
